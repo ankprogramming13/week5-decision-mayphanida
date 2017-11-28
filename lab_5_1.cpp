@@ -16,9 +16,14 @@ int main ()
     cout << "Enter the second name: ";
     cin >> name2;
 
+    if (name1 == name2) {
+        cout << "The two names are equal" << endl;
+    } else {
+        cout << "The two names are not equal" << endl;
+    }
+
+
     // เขียนเงื่อนไขให้ถูกต้องซะ หนูๆ
-    cout << "The two names are equal" << endl;
-    cout << "The two names are not equal" << endl;
 
     return 0;
 }
