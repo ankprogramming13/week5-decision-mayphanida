@@ -5,9 +5,9 @@
 using namespace std;
 
 int main () {
-
-  string playerName, choicel;
-  int score = 0, life = 3;
+string playerName;
+int score = 0, life = 3;
+char choice;
 
   // ประกาศตัวแปรเพื่อรับการเลือกคำตอบของผู้เล่น
   // เช่นการเป็น ตัวเลขให้ประกาศเป็น int choice1;
@@ -37,7 +37,7 @@ int main () {
   // เขียนคำสั่งแสดงผล คำถามให้ผู้ใช้ตัดสินใจ
   // เช่น cout << "What should you do? (A)sk for money,(S)teal : ";
 
-  cout << "What should you do? (S)say sorry, (N)not care : ";
+  cout << "What should you do? (1)say sorry, (2)not care : ";
   // เขียนคำสั่งรับคำตอบจากผู้ใช้ แล้วให้คะแนนหรือทำโทษ จากการตัดสินใจนั้น
   // เช่น
   //     cin >> choice1;
@@ -46,10 +46,11 @@ int main () {
   //        case "A" : score += 50; cout << "You ask for money from people then you get 100 baht. You are very happy. Now you can shopping."
   //     }
 
-  cin >> choicel;
-  switch(choicel) { //มันerrorอะไรอ่ะอาจารย์
-    case "S" : score += 100; cout << "You say sorry to the teacher. Now you can playing basketball.";
-    case "N" : score -= 20;  life -= 1; cout << "You do not care about your own actions. Make you be blamed.";
+  cin >> choice;
+  switch(choice) {
+    case 1: score += 100; cout << "You say sorry to the teacher. Now you can playing basketball." << endl; break;
+    case 2: score -= 20;  life -= 1; cout << "You do not care about your own actions. Make you be blamed." << endl; break;
+    default : cout << "Error" << endl;
   }
 
   // ฝึกสร้างสถานการณ์และสร้างเงื่อนไข อีก 2 สถานการณ์
